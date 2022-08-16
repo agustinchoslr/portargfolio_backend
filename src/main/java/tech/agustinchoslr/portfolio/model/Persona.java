@@ -1,8 +1,13 @@
 package tech.agustinchoslr.portfolio.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Getter
+@Setter
 @Entity
 
 public class Persona implements Serializable {
@@ -18,6 +23,9 @@ public class Persona implements Serializable {
     private String email;
     private String fbContact;
     private String linkedinContact;
+
+    public Persona(){
+    }
 
     public Persona(long id, String name, String jobTitle, String shortDescription, String profileImageUrl, String coverImageUrl, String email, String fbContact, String linkedinContact) {
         this.id = id;
@@ -107,14 +115,14 @@ public class Persona implements Serializable {
     public String toString() {
         return "Persona{" +
                 "id=" + id +
-                ", name=" + name +
-                ", jobTitle=" + jobTitle +
-                ", shortDescription=" + shortDescription +
-                ", profileImageUrl=" + profileImageUrl +
-                ", coverImageUrl=" + coverImageUrl +
-                ", email=" + email +
-                ", fbContact=" + fbContact +
-                ", linkedinContact=" + linkedinContact +
+                ", name='" + name + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", profileImageUrl='" + profileImageUrl + '\'' +
+                ", coverImageUrl='" + coverImageUrl + '\'' +
+                ", email='" + email + '\'' +
+                ", fbContact='" + fbContact + '\'' +
+                ", linkedinContact='" + linkedinContact + '\'' +
                 '}';
     }
 }
