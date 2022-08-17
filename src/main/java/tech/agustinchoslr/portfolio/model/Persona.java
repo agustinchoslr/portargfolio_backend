@@ -1,10 +1,12 @@
 package tech.agustinchoslr.portfolio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -25,7 +27,25 @@ public class Persona implements Serializable {
     private String linkedinContact;
 
 
+    @JsonIgnoreProperties("persona")
+    @OneToMany(cascade = CascadeType.ALL, targetEntity = Educacion.class)
+    @JoinColumn(name = "ed_fk", referencedColumnName = "id")
+    private List<Educacion> educacionList;
 
+    @JsonIgnoreProperties("persona")
+    @OneToMany(cascade = CascadeType.ALL, targetEntity = Experiencia.class)
+    @JoinColumn(name = "ex_fk", referencedColumnName = "id")
+    private List<Experiencia> experienciaList;
+
+    @JsonIgnoreProperties("persona")
+    @OneToMany(cascade = CascadeType.ALL, targetEntity = Skill.class)
+    @JoinColumn(name = "sk_fk", referencedColumnName = "id")
+    private List<Skill> skillList;
+
+    @JsonIgnoreProperties("persona")
+    @OneToMany(cascade = CascadeType.ALL, targetEntity = Proyecto.class)
+    @JoinColumn(name = "pr_fk", referencedColumnName = "id")
+    private List<Proyecto> proyectoList;
 
 
     public Persona(){
