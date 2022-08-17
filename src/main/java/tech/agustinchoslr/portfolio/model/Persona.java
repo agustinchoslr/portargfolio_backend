@@ -24,6 +24,10 @@ public class Persona implements Serializable {
     private String fbContact;
     private String linkedinContact;
 
+
+
+
+
     public Persona(){
     }
 
