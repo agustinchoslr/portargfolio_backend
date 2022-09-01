@@ -35,18 +35,19 @@ public class ExperienciaResource {
         return new ResponseEntity<>(experiencia, HttpStatus.OK);
     }
 
+    // @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<Experiencia> addExperiencia(@RequestBody Experiencia experiencia) {
         Experiencia newExperiencia =  experienciaService.addExperiencia(experiencia);
         return new ResponseEntity<>(newExperiencia, HttpStatus.CREATED);
     }
-
+    //  @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<Experiencia> updateExperiencia(@RequestBody Experiencia experiencia) {
         Experiencia updateExperiencia =  experienciaService.updateExperiencia(experiencia);
         return new ResponseEntity<>(updateExperiencia, HttpStatus.OK);
     }
-
+    // @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteExperiencia(@PathVariable("id") Long id) {
         experienciaService.deleteExperiencia(id);

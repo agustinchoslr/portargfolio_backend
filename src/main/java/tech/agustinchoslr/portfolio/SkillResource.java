@@ -33,19 +33,19 @@ public class SkillResource {
         Skill skill = skillService.findSkillById(id);
         return new ResponseEntity<>(skill, HttpStatus.OK);
     }
-
+    // @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<Skill> addSkill(@RequestBody Skill skill) {
         Skill newSkill =  skillService.addSkill(skill);
         return new ResponseEntity<>(newSkill, HttpStatus.CREATED);
     }
-
+    //  @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<Skill> updateSkill(@RequestBody Skill skill) {
         Skill updateSkill =  skillService.updateSkill(skill);
         return new ResponseEntity<>(updateSkill, HttpStatus.OK);
     }
-
+    //  @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteSkill(@PathVariable("id") Long id) {
         skillService.deleteSkill(id);
