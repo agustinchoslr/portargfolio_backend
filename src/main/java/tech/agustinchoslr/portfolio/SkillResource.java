@@ -2,6 +2,7 @@ package tech.agustinchoslr.portfolio;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import tech.agustinchoslr.portfolio.model.Skill;
 import tech.agustinchoslr.portfolio.service.SkillService;
@@ -33,19 +34,19 @@ public class SkillResource {
         Skill skill = skillService.findSkillById(id);
         return new ResponseEntity<>(skill, HttpStatus.OK);
     }
-    // @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<Skill> addSkill(@RequestBody Skill skill) {
         Skill newSkill =  skillService.addSkill(skill);
         return new ResponseEntity<>(newSkill, HttpStatus.CREATED);
     }
-    //  @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<Skill> updateSkill(@RequestBody Skill skill) {
         Skill updateSkill =  skillService.updateSkill(skill);
         return new ResponseEntity<>(updateSkill, HttpStatus.OK);
     }
-    //  @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteSkill(@PathVariable("id") Long id) {
         skillService.deleteSkill(id);

@@ -3,6 +3,7 @@ package tech.agustinchoslr.portfolio;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import tech.agustinchoslr.portfolio.model.Proyecto;
 import tech.agustinchoslr.portfolio.service.ProyectoService;
@@ -34,19 +35,19 @@ public class ProyectoResource {
         Proyecto proyecto = proyectoService.findProyectoById(id);
         return new ResponseEntity<>(proyecto, HttpStatus.OK);
     }
-    //  @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<Proyecto> addProyecto(@RequestBody Proyecto proyecto) {
         Proyecto newProyecto =  proyectoService.addProyecto(proyecto);
         return new ResponseEntity<>(newProyecto, HttpStatus.CREATED);
     }
-    //  @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<Proyecto> updateProyecto(@RequestBody Proyecto proyecto) {
         Proyecto updateProyecto =  proyectoService.updateProyecto(proyecto);
         return new ResponseEntity<>(updateProyecto, HttpStatus.OK);
     }
-    //  @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteProyecto(@PathVariable("id") Long id) {
         proyectoService.deleteProyecto(id);
