@@ -10,7 +10,6 @@ import tech.agustinchoslr.portfolio.service.PersonaService;
 import javax.transaction.Transactional;
 import java.util.List;
 
-
 @RestController
 @CrossOrigin(origins = "https://argprog-24b53.web.app")
 @Transactional

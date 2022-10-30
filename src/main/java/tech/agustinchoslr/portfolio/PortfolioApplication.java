@@ -29,7 +29,7 @@ public class PortfolioApplication {
 				"Access-Control-Allow-Origin", "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
 		corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
-		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
+		urlBasedCorsConfigurationSource.registerCorsConfiguration("https://argprog-24b53.web.app/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
 
