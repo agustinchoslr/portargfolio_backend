@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://argprog-24b53.web.app")
+@CrossOrigin
 @Transactional
 
 
