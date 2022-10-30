@@ -11,10 +11,10 @@ import tech.agustinchoslr.portfolio.service.ProyectoService;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@RestController
 @CrossOrigin(origins = "https://argprog-24b53.web.app")
 @Transactional
 
-@RestController
 @RequestMapping("/proyecto")
 public class ProyectoResource {
     private final ProyectoService proyectoService;

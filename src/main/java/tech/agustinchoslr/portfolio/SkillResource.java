@@ -10,10 +10,10 @@ import tech.agustinchoslr.portfolio.service.SkillService;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@RestController
 @CrossOrigin(origins = "https://argprog-24b53.web.app")
 @Transactional
 
-@RestController
 @RequestMapping("/skill")
 public class SkillResource {
     private final SkillService skillService;
