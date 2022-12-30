@@ -1,7 +1,7 @@
 # portargfolio_backend
 
 BackEnd API del portfolio que integra el proyecto final de Argentina Programa.
-Creado íntegramente con los conocimientos adquiridos en dicho programa.
+Creado íntegramente con los conocimientos adquiridos en dicho programa. https://argprog-24b53.web.app/
 
 Compone un todo con el FrontEnd que se encuentra en https://github.com/agustinchoslr/argprog
 
@@ -19,7 +19,9 @@ MySQL Workbench (https://www.mysql.com/downloads): versión 8.0 CE para la reali
 
 Postman (https://app.getpostman.com/app/download/win64): versión 9.27.0 para probar las peticiones
 
-Servidores usados: Heroku para el back, Clever para la DB y Firebase para el front.
+Servidores usados: Koyeb para el back (en principio era Heroku, luego se cambió a Koyeb) ,
+Clever para la DB y 
+Firebase para el front.
 
 Acceso al DER de la base de datos en formato .jpg
 ![WhatsApp Image 2022-08-17 at 1 24 56 AM](https://user-images.githubusercontent.com/304371/199145567-5520535e-ac02-4037-8f29-f794154780e5.jpeg)
