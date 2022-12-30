@@ -1,7 +1,7 @@
 # portargfolio_backend
 
 BackEnd API del portfolio que integra el proyecto final de Argentina Programa.
-Creado íntegramente con los conocimientos adquiridos en dicho programa. https://argprog-24b53.web.app/
+Creado íntegramente con los conocimientos adquiridos en dicho programa. URL de acceso al portfolio: https://argprog-24b53.web.app/
 
 Compone un todo con el FrontEnd que se encuentra en https://github.com/agustinchoslr/argprog
 
